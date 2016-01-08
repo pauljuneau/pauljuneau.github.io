@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
@@ -56,10 +57,15 @@
   <div class="jumbotron">
     <div class="container text-center">
       <h2>Welcome to Paul Juneau's Engineering Portfolio!</h2>      
-      <p>Designed from the ground up using html, bootstrap, css, jQuery to allow the user to have a smooth 
+      <p>This portfolio website was designed using html, bootstrap, css, and jQuery. This allows the user to have a smooth 
 		and seemless experience when navigating this web portfolio on their desktop, tablet, or smart phone. </br>
-		Enjoy browsing and please feel free to contact me via
-		<a href="https://www.linkedin.com/in/paul-juneau-8a097163">LinkedIn</a></p>
+		Enjoy browsing my engineering portfolio and please feel free to connect with me via
+		<a target="_blank" href="https://www.linkedin.com/pub/paul-juneau/63/971/8a0">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Paul Juneau's profile on LinkedIn">
+        
+		</a>
+	  </p>
     </div>
   </div>
 </div>
@@ -125,14 +131,23 @@
 </div>  
 
 <div id="contact" class="container-fluid">
-  <h1>Contact Me</h1>
-  <p>Click on the different Section links in the navbar to see the smooth scrolling effect.</p>
+  <h3>Contact me via:&nbsp 
+	<a target="_blank" href="https://www.linkedin.com/pub/paul-juneau/63/971/8a0">
+      
+          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Paul Juneau's profile on LinkedIn">
+        
+    </a>
+  </h3>
+  <h3>Follow me on Github! 
+	<a href="https://github.com/pauljuneau" target="_blank" class="btn btn-default btn-lg">	
+	<i class="fa fa-github fa-fw"></i>
+	</a>
 </div>
 
 <script>
 $(document).ready(function(){
   // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 50});   
+  $('body').scrollspy({target: ".navbar", offset: 75});   
 
   // Add smooth scrolling on all links inside the navbar
   $("#myNavbar a").on('click', function(event) {
