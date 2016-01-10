@@ -8,21 +8,48 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <!--how to link to external css sheet:<link rel="stylesheet" href="main.css" />-->	
+  <!--how to link to external js: <script src="myscripts.js"></script> can be placed in body as well-->
   <style>
+  /*"White text with black outline can be read on any background"*/
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-
-    #about {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-    #contact {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-    background-color: #f2f2f2;
-      padding: 25px;
-    }
+	
+	#welcome {
+		padding-top:50px;
+		/*old style height css units (px)
+		height:500px; */
+		height: 100vh;
+		color: #fff;
+		text-shadow: 2px 2px #000000;	
+		background-image: url("http://i.imgur.com/7KVizeY.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		
+	}
+	h1.changeFont {
+		font-family: Raleway;
+		font-size: 4vw;
+	}
+    #about {
+		padding-top:10px;
+		height: 100vh;
+		color: #fff; 
+		text-shadow: 1.5px 1.5px 2px #000000;	
+		background-color: #673ab7;
+	}
+	
+    #contact {
+		padding-top:50px;
+		height:40vh;
+		color: #fff; 
+		background-color: #1E88E5;
+	}
+	
   </style>
 </head>
 <body>
@@ -35,11 +62,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#" style="font-size:13px">Paul Juneau Engineering Portfolio</a>
+      <a class="navbar-brand" href="#welcome" style="font-size:13px">Paul Juneau Engineering Portfolio</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#welcome">Welcome</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -53,10 +80,10 @@
   </div>
 </nav>
 
-<div id="home" class="container-fluid">
-  <div class="jumbotron">
+<div id="welcome" class="container-fluid">
+  <!--<div class="jumbotron">-->
     <div class="container text-center">
-      <h2>Welcome to Paul Juneau's Engineering Portfolio!</h2>      
+      <h1 class="changeFont">Welcome to Paul Juneau's Engineering Portfolio!</h2>      
       <p>This portfolio website was designed using html, bootstrap, css, and jQuery. This allows the user to have a smooth 
 		and seemless experience when navigating this web portfolio on their desktop, tablet, or smart phone. </br>
 		Enjoy browsing my engineering portfolio and please feel free to connect with me via
@@ -67,7 +94,7 @@
 		</a>
 	  </p>
     </div>
-  </div>
+  <!--</div>-->
 </div>
 
 <div id="about" class="container-fluid">
