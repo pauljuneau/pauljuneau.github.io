@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Ubuntu|Raleway' rel='stylesheet' type='text/css'>
   <!--how to link to external css sheet:<link rel="stylesheet" href="main.css" />-->	
   <!--how to link to external js: <script src="myscripts.js"></script> can be placed in body as well-->
   <style>
@@ -29,18 +29,26 @@
 		background-image: url("http://i.imgur.com/7KVizeY.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
-		
+		border-bottom: 4px solid #0d0d0d; 
 	}
-	h1.changeFont {
-		font-family: Raleway;
-		font-size: 4vw;
-	}
+	
     #about {
 		padding-top:10px;
 		height: 100vh;
-		color: #fff; 
+		color: #fff;
 		text-shadow: 1.5px 1.5px 2px #000000;	
-		background-color: #673ab7;
+		/*background-color: #673ab7;*/
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b2d00+0,0b2800+36,1a2b00+100 */
+		background: #0b2d00; /* Old browsers */
+		background: -moz-linear-gradient(top,  #0b2d00 0%, #0b2800 36%, #1a2b00 100%); /* FF3.6-15 */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b2d00), color-stop(36%,#0b2800), color-stop(100%,#1a2b00)); /* Chrome4-9,Safari4-5 */
+		background: -webkit-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* Chrome10-25,Safari5.1-6 */
+		background: -o-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* Opera 11.10-11.50 */
+		background: -ms-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* IE10 preview */
+		background: linear-gradient(to bottom,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b2d00', endColorstr='#1a2b00',GradientType=0 ); /* IE6-9 */
+		border-bottom: 4px solid #0d0d0d; 
+
 	}
 	
     #contact {
@@ -50,6 +58,15 @@
 		background-color: #1E88E5;
 	}
 	
+	/*Fonts*/
+	.ralewayFont {
+		font-family: 'Raleway', sans-serif;
+		font-size: 3.5vw;
+	}
+	
+	.ubuntuFont {
+		font-family: 'Ubuntu', sans-serif;
+	}
   </style>
 </head>
 <body>
@@ -83,9 +100,14 @@
 <div id="welcome" class="container-fluid">
   <!--<div class="jumbotron">-->
     <div class="container text-center">
-      <h1 class="changeFont">Welcome to Paul Juneau's Engineering Portfolio!</h2>      
-      <p>This portfolio website was designed using html, bootstrap, css, and jQuery. This allows the user to have a smooth 
-		and seemless experience when navigating this web portfolio on their desktop, tablet, or smart phone. </br>
+      <h1 class="ralewayFont">Engineering Across The Spectrum</h1>      
+      <p class="ubuntuFont"> Welcome to Paul Juneau's Engineering Web Portfolio. You may be wondering, "What is this background picture?" 
+		I took this picture of a biomaterial I was developing for wound dressing applications. 
+		Those green dots are cells captured with a fluorescent dye that have integrated into the biocompatible wound dressing.
+		Pretty cool, eh?<br>
+		To find out more head to my <a target="_blank" href="#">Wound Dressing Project Page</a>, or go to the <a href="#portfolio">Portfolio</a>
+		section to see more diverse projects of mine.<br><br><br><br>
+		I designed this web portfolio using html, bootstrap, css, and jQuery.<br><br>
 		Enjoy browsing my engineering portfolio and please feel free to connect with me via
 		<a target="_blank" href="https://www.linkedin.com/pub/paul-juneau/63/971/8a0">
       
@@ -99,13 +121,17 @@
 
 <div id="about" class="container-fluid">
   <div class="container-fluid bg-3 text-center">	
-    <h3>About Me</h3><br>
+    <h3 class="ralewayFont">About Me</h3><br>
     <div class="row">
 	  <div class="col-sm-3">
 	    <img src="http://i.imgur.com/TO86qjw.jpg" class="img-responsive" style="width:100%"alt="Image">
 	  </div>
-	  <div class="col-sm-3">
-	    <p>About me goes here</p>
+	  <div class="col-sm-9"> 
+		<p class="ubuntuFont">My name is Paul Juneau. I am currently a Software Engineer for Tata Consultancy Services where 
+		I develop a data validation and storage system using Informatica PowerCenter and DB2 in a Unix environment. 
+		I graduated <i>Magna Cum Laude</i> from Arizona State University in 2014, earning a degree in Biomedical Engineering. 
+		I decided to transition into Software Engineering because I am passionate about the field and how the skills I have 
+		learned can span the engineering spectrum.  </p>
 	  </div>
     </div>
   </div><br>	
