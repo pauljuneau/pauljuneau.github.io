@@ -37,7 +37,7 @@
 	
     #about {
 		padding-top:10px;
-		height: 130vh;
+		height: 100vh;
 		color: #fff;
 		text-shadow: 1.5px 1.5px 2px #000000;	
 		/*background-color: #673ab7;*/
@@ -132,41 +132,18 @@
 </div>
 
 <div id="about" class="container-fluid">
-  <div class="container-fluid bg-3 text-center">	
-    <h3 class="ralewayFont">About Me</h3><br>
+  <!--<div class="container-fluid bg-3 text-center">-->	
+    <center><h3 class="ralewayFont">About Me</h3></center>
+	<br>
     <div class="row">
-	  <div class="col-sm-12">
+	  <div class="col-sm-3">
 	    <img src="http://i.imgur.com/TO86qjw.jpg" class="img-responsive" style="width:100%"alt="Image">
 	  </div>
-	</div>  
-	  <!--><div class="col-sm-9"><--> 
-	<div class="row">
-	  <div class="col-sm-12">
-		<!--<p class="ubuntuFont" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Hello, my name is Paul Juneau.&nbsp; I am an ABET accredited engineer, and graduated <i>Magna Cum Laude</i> in 2014 with a BSE in Biomedical Engineering from Arizona State University.&nbsp; Being a Biomedical Engineer, I have a passion for leveraging technology for the benefit of others. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;The advantages of my degree is that I have learned how to meld many engineering fields, such as Software, Electrical, Mechanical, Material, and Chemical, in order to create medical devices that can interact with the complexities of the human body. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;During my degree, I worked on many varying research projects.&nbsp; Dr. Brent Vernon allowed me to work in his Biomaterial Research Laboratory, and I did so for nearly two years.&nbsp; I started off being a research assistant for Dr. Derek Overstreet, who is a CEO of <a href="http://www.sonoranbiosciences.com/">SONARAN BIOSCIENCES</a>.&nbsp; Here I synthesized a viscous sustained release carrier hydrogel which is being developed to treat prosthetic joint infection and studied its sustained antibiotic drug release abilities.&nbsp; After demonstrating my capabilities to the two engineering doctorates, I was allowed to tackle my own project for constructing a cardiac stem-cell delivery hydrogel to treat myocardial infarctions.&nbsp; I was awarded multiple research grants and scholarships for this.&nbsp; This project evolved into my Senior Capstone project where I led a team of four in the design and development.&nbsp; During my research I wanted to encourage high school students to pursue STEM and was a mentor to multiple students. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Other extracurricular activities of mine included entering the EPA's P3 - People, Prosperity and the Planet competition.&nbsp; This competition is for students to enter sustainable solutions for the community.&nbsp; I was the project leader of four where we advertised our design concepts of low-cost tornado shelters built from recycled shipping containers.&nbsp; Our team was awarded a $1000 grant for the desgin.  
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Being a part of the medical community is very important to me as well.&nbsp; I was a board member of the American Medical Student Association (AMSA) for two years.&nbsp; During this time, I organized club activities such as persuading physicians from the Mayo Clinic in Phoenix to come to our meetings to talk to undergrads about medical careers. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Besides biomaterial research, I have done many projects in MATLAB, C++, Computational Fluid Dynamic modeling using ANSYS FLUENT CFD and Tecplot 360, 3D modeling using MIMICS and SolidWorks, Biomedical Circuity, Biomedical Signal Processing, and Biomedical Transport Phenomena during my degree.&nbsp; <i>These projects can found in the portfolio section below with additional projects I have done on the side.</i>   
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;After graduating from ASU, I decided to pursue Software Engineering because I recognized the power in knowing how to program algorithms and computer systems, and how versatile software can be.&nbsp; My passion and drive has allowed me to become a Sofware Engineering Consultant at <a href = "http://www.tcs.com/">Tata Consultancy Services (TCS)</a>.&nbsp; Being a Software Engineering Consultant has granted me experience and exposure to many software fields.&nbsp; My first project was to construct a JAVA EE Web Application Portal for a Satellite TV Company to use for its customers and employees.&nbsp;  I was also able to do <i>Pro bono</i> work for TCS by consulting a non-profit organization to boost their web presence by leveraging social media tools for SEO.&nbsp; Currently, I am allocated as a Systems Engineer on a Federal Contract with a specific Government Department where I am building ETL and data warehousing batch processing solutions for a new claim validation system. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;All of this has been very exciting, and am looking forward to see what comes next.&nbsp; I appreciate you visiting my site.&nbsp; Please feel free to connect with me via the CONTACT links below.
-		<br><br>
-		Best regards,
-		<br><br>
-		Paul Juneau 
-		</p><-->
+	  <div class="col-sm-9">
 		<iframe class="iframe-class" src="AboutMe.html"><<p>Your browser does not support iframes.</p></iframe>	
 	  </div>
     </div>
-  </div><br><br>
-  </div>  
+  <!--</div><br>->  
 </div>
 
 
@@ -239,6 +216,44 @@ $(document).ready(function(){
       window.location.hash = hash;
     });
   });
+});
+
+$(function () {
+
+    //setup these vars only once since they are static
+    var $myIFRAME   = $(".iframe-class"),//unless this collection of elements changes over time, you only need to select them once
+        ogWidth     = 700,
+        ogHeight    = 600,
+        ogRatio     = ogWidth / ogHeight,
+        windowWidth = 0,//store windowWidth here, this is just a different way to store this data
+        resizeTimer = null;
+
+    function setIFrameSize() {
+        if (windowWidth < 480) {
+
+            var parentDivWidth = $myIFRAME.parent().width(),//be aware this will still only get the height of the first element in this set of elements, you'll have to loop over them if you want to support more than one iframe on a page
+                newHeight      = (parentDivWidth / ogRatio);
+
+            $myIFRAME.addClass("iframe-class-resize").css({ height : newHeight, width : parentDivWidth });
+        } else {
+            $myIFRAME.removeClass("iframe-class-resize").css({ width : '', height : '' });
+        }
+    }
+
+    $(window).resize(function () {
+
+        //only run this once per resize event, if a user drags the window to a different size, this will wait until they finish, then run the resize function
+        //this way you don't blow up someone's browser with your resize function running hundreds of times a second
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            //make sure to update windowWidth before calling resize function
+            windowWidth = $(window).width();
+
+            setIFrameSize();
+
+        }, 75);
+
+    }).trigger("click");//run this once initially, just a different way to initialize
 });
 </script>
 
