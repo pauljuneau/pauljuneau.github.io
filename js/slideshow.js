@@ -24,3 +24,12 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+//redirect on click to project gh page
+var images = document.getElementsByTagName("img");
+for(var i = 0; i < images.length; i++) {
+    var image = images[i];
+    image.onclick = function(event) {
+         window.location.href = this.id; //+ '.html';
+    };
+}
