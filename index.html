@@ -2,222 +2,35 @@
 <html lang="en">
 <head>
   <title>Paul Juneau Engineering Portfolio</title>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu|Raleway' rel='stylesheet' type='text/css'>
-  <!--how to link to external css sheet:<link rel="stylesheet" href="main.css" />-->	
-  <!--how to link to external js: <script src="myscripts.js"></script> can be placed in body as well-->
-  <style>
-  /*"White text with black outline can be read on any background"*/
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-	
-	#home {
-		padding-top:50px;
-		height: 60vh;
-		color: #fff;
-		font-weight: bold;
-		font-size: large;
-		text-shadow: 2px 2px #000000;	
-		background: #000099;
-		border-bottom: 4px solid #0d0d0d; 
-	}
-	
-    #about {
-		padding-top:10px;
-		height: 100vh;
-		color: #fff;
-		text-shadow: 1.5px 1.5px 2px #000000;	
-		/*background-color: #673ab7;*/
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b2d00+0,0b2800+36,1a2b00+100 */
-		background: #0b2d00; /* Old browsers */
-		background: -moz-linear-gradient(top,  #0b2d00 0%, #0b2800 36%, #1a2b00 100%); /* FF3.6-15 */
-		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0b2d00), color-stop(36%,#0b2800), color-stop(100%,#1a2b00)); /* Chrome4-9,Safari4-5 */
-		background: -webkit-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* Chrome10-25,Safari5.1-6 */
-		background: -o-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* Opera 11.10-11.50 */
-		background: -ms-linear-gradient(top,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* IE10 preview */
-		background: linear-gradient(to bottom,  #0b2d00 0%,#0b2800 36%,#1a2b00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b2d00', endColorstr='#1a2b00',GradientType=0 ); /* IE6-9 */
-		border-bottom: 4px solid #0d0d0d; 
-
-	}
-	
-	/*Fonts*/
-	.ralewayFont {
-		font-family: 'Raleway', sans-serif;
-		font-size: 4.5vw;
-	}
-	
-	.ubuntuFont {
-		font-family: 'Ubuntu', sans-serif;
-	}
-	
-	div {
-    overflow:auto;
-	}
-  </style>
+  <link rel="stylesheet" href="main.css" />
+  
 </head>
 <body>
+  <div class="slideshow-container">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#home" style="font-size:13px">Paul Juneau Engineering Portfolio</a>
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="LoanRepaymentMethodComparison.jpg" style="width:100%">
+      <div class="text">Caption Text</div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-      </ul>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
     </div>
-  </div>
-</nav>
-
-<nav class="navbar navbar-inverse navbar-fixed-bottom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="https://www.linkedin.com/in/pauljuneau" style="font-size:13px">CONTACT</a>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a target="_blank" href="https://www.linkedin.com/in/pauljuneau" class ="btn btn-primary btn-sm"><i class="fa fa-linkedin-square"></i>  
-		  </a>
-	  </li>
-      <li><a href="mailto:pauljuneauengineer@gmail.com?Subject=Hello" target="_blank" class="btn btn-default btn-sm"><i class="fa fa-envelope fa-fw"></i>pauljuneauengineer@gmail.com
-		  </a>
-	  </li>
-    </ul>
-  </div>
-</nav>
 
-<div id="home" class="container-fluid">
-  <div class="container text-center">
-    <h1 class="ralewayFont">Welcome to Paul Juneau's Engineering Portfolio</h1>      
-    <p class="ubuntuFont">The purpose of this portfolio is to allow prospective employers to browse projects that I have done in more detail than what <a target="_blank" href="https://www.linkedin.com/pub/paul-juneau/63/971/8a0"><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png" width="160" height="33" border="0" alt="View Paul Juneau's profile on LinkedIn"></a> states. This portfolio also serves as a project in itself to demonstrate my front-end web development capabilities. I designed this portfolio framework using html, bootstrap, css, and jQuery. 
-	<br><br>
-	All of the source code for my projects can be found on my GitHub:&nbsp; <a href="https://github.com/pauljuneau" target="_blank" ><i class="fa fa-github fa-2x fa-inverse"></i></a><br> Direct links to source code will be provided on each project page.
-	<br><br>
-	Enjoy browsing my engineering portfolio and please feel free to connect with me via the contact links in the bottom-fixed navbar!
-	</p>
-  </div>
-</div>
-
-<div id="about" class="container-fluid">
-    <center><h3 class="ralewayFont">About Me</h3></center>
-	<br>
-    <div class="row-fluid">
-	    <img src="http://i.imgur.com/TO86qjw.jpg" class="img-responsive" style="width:50%"alt="Image">
-		<br>
-	</div>
-	<div class="row-fluid">	
-		<p class="ubuntuFont" align="left">&nbsp;&nbsp;&nbsp;&nbsp;Hello, my name is Paul Juneau.&nbsp; I am an ABET accredited engineer, and graduated <i>Magna Cum Laude</i> in 2014 with a BSE in Biomedical Engineering from Arizona State University.&nbsp; Being a Biomedical Engineer, I have a passion for leveraging technology for the benefit of others. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;The advantages of my degree is that I have learned how to meld many engineering fields, such as Software, Electrical, Mechanical, Material, and Chemical, in order to create medical devices. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;During my degree, I worked on many varying research projects.&nbsp; Dr. Brent Vernon allowed me to work in his Biomaterial Research Laboratory, and I did so for nearly two years.&nbsp; I started off being a research assistant for Dr. Derek Overstreet, who is a CEO of <a href="http://www.sonoranbiosciences.com/">SONARAN BIOSCIENCES</a>.&nbsp; Here I synthesized a viscous sustained release carrier hydrogel which is being developed to treat prosthetic joint infection and studied its sustained antibiotic drug release abilities.&nbsp; After demonstrating my capabilities to the two engineering doctorates, I was allowed to tackle my own project for constructing a cardiac stem-cell delivery hydrogel to treat myocardial infarctions.&nbsp; I was awarded multiple research grants and scholarships for this.&nbsp; This project evolved into my Senior Capstone project where I led a team of four in the design and development.&nbsp; During my research I wanted to encourage high school students to pursue STEM and was a mentor to multiple students. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Other extracurricular activities of mine included entering the EPA's P3 - People, Prosperity and the Planet competition.&nbsp; This competition is for students to enter sustainable solutions for the community.&nbsp; I was the project leader of four where we advertised our design concepts of low-cost tornado shelters built from recycled shipping containers.&nbsp; Our team was awarded a $1000 grant for the desgin.  
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Being a part of the medical community is very important to me as well.&nbsp; I was a board member of the American Medical Student Association (AMSA) for two years.&nbsp; During this time, I organized club activities such as encouraging physicians from the Mayo Clinic in Phoenix to come to our meetings to talk to undergrads about medical careers. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;Besides biomaterial research, I have done many projects in MATLAB, C++, Computational Fluid Dynamic modeling using ANSYS FLUENT CFD and Tecplot 360, 3D modeling using MIMICS and SolidWorks, Biomedical Circuity, Biomedical Signal Processing, and Biomedical Transport Phenomena during my degree.&nbsp; <i>These projects can found in the portfolio section below with additional projects I have done on the side.</i>   
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;After graduating from ASU, I decided to pursue a career in Software Engineering because I recognized the power in knowing how to program algorithms and computer systems, along with how versatile software can be.&nbsp; My passion and drive for Software Engineering opened up doors and I was able to become a Sofware Engineering Consultant at <a href = "http://www.tcs.com/">Tata Consultancy Services (TCS)</a> in February of 2015.&nbsp; Being a Software Engineering Consultant has granted me experience and exposure to many software fields.&nbsp; My first project was to construct a JAVA EE Web Application Portal for a Satellite TV Company to use for its customers and employees.&nbsp;  I was also able to do <i>Pro bono</i> work for TCS by consulting a non-profit organization to boost their web presence by leveraging social media tools for SEO.&nbsp; I was then allocated as a Systems Engineer on a Federal Contract with a specific Government Department where we built ETL and data warehousing batch processing solutions for a new claim validation system. 
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;As of May of 2016, I was able to land a position with <a href = "http://www.godigitalmarketing.com/">G/O Digital</a> where I am a Salesforce Software Engineering Developer in a fast-paced, agile team environment.&nbsp; As a team, we continually design, develop, test, and deploy custom modifications, updates, and new functionalities to G/O Digital's Salesforce Org.
-		<br><br>
-		&nbsp;&nbsp;&nbsp;&nbsp;All of this has been very exciting, and am looking forward to see what comes next.&nbsp; I appreciate you visiting my site.&nbsp; Please feel free to connect with me via the CONTACT links below.
-		<br><br>
-		Best regards,
-		<br><br>
-		Paul Juneau 
-		</p>
-	</div>
-</div>
-
-
-<div id="portfolio" class="container-fluid">
-  
-    <center><h3>Some of my Work</h3></center><br>
-    <div class="row">
-      <div class="col-sm-3">
-        <p></p>
-        <a href = "http://pauljuneau.github.io/LoanRepaymentMethodComparison/"><img src="LoanRepaymentMethodComparison.jpg" class="img-responsive" style="width:100%" alt="Image"></a>
-      </div>
-      <div class="col-sm-3"> 
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3"> 
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-
-    </div><br>
-  
-    <div class="row">
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3"> 
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3"> 
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-
-<script>
-$(document).ready(function(){
-  // Add scrollspy to <body>
-  $('body').scrollspy({target: ".navbar", offset: 75});   
-
-  // Add smooth scrolling on all links inside the navbar
-  $("#myNavbar a").on('click', function(event) {
-
-    // Prevent default anchor click behavior
-    event.preventDefault();
-
-    // Store hash
-    var hash = this.hash;
-
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 800, function(){
-   
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
-  });
-});
-
-</script>
-
+    <script src="js/profile.js"></script>
 </body>
+<!--
+  ATTRIBUTIONS:
+  https://www.w3schools.com/howto/howto_js_slideshow.asp
+-->
 </html>
